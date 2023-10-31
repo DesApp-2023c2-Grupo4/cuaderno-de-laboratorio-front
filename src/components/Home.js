@@ -21,7 +21,7 @@ export default function Home() {
       <Card className={classes.card}>
         <CardContent>
           <Container maxWidth="xl" className={classes.conteinerButton}>
-            <Button variant="contained"> Nombre del TP</Button>
+            <Button variant="contained"> cuatrimestre actual</Button>
             <Button variant="contained"> cuatrimestres anteriores</Button>
             <Button variant="text"></Button>
           </Container>

@@ -86,6 +86,6 @@ export default function DatosUsuario() {
   return hasError
     ? errorRendering()
     : usuario == null
-      ? loadingRendering()
-      : usuarioRendering();
+    ? loadingRendering()
+    : usuarioRendering();
 }
