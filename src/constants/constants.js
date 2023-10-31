@@ -22,6 +22,7 @@ export const usuariosFijos = [
     fechaNacimiento: '1921-11-17',
     edad: 100,
   },
+
   {
     id: 4,
     nombre: 'Erica',
