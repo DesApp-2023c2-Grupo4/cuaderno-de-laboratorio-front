@@ -5,6 +5,7 @@ import { Header } from './components/General/Header';
 import { Footer } from './components/General/Footer';
 import Comision from './components/Comision';
 import Tps from './components/Tps';
+import TpDetalle from './components/TpDetalle';
 import CrearTps from './components/CrearTps';
 import AdministrarGrupos from './components/Profesores/AdmGrupos';
 
@@ -53,6 +54,10 @@ export default function App() {
                   <Tps />
                 </Route>
               }
+              <Route
+                path="/tp/:idCurso/:profesorId/:tpId"
+                component={TpDetalle}
+              />
               {
                 <Route path="/crearTps/:idCurso/:profesorId">
                   <CrearTps />

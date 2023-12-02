@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
   curso: { display: 'inline-grid' },
 }));
 
-const profesorId = '6568b1c3cd65168f1a42693f';
+const profesorId = '6560d97dc8acb750f033c602';
 
 export default function Comision() {
   const { estadoCurso } = useParams();
@@ -31,6 +31,8 @@ export default function Comision() {
 
   const [comision, setComision] = useState(null);
   const [hasError, setHasError] = useState(false);
+  const [materiaNombre, setMateriaNombre] = useState('');
+
   const tituloHeader =
     estadoCurso === 'actual'
       ? 'Listado De Cursos |cuatrimestre actual '
@@ -68,13 +70,14 @@ export default function Comision() {
                 {comision.map((it) => (
                   //Falta Nombtr  de la  Materia
                   <Button
-                    component={NavLink}
-                    to={`/tps/${it._id}/${profesorId}`}
-                    variant="contained"
-                    key={it._id}
-                  >
-                    {` ${it.materia.nombre}`} | {` ${it.comision}`}
-                  </Button>
+                  materia={it.materia.nombre}  // Pasa la materia como prop
+                  component={NavLink}
+                  to={`/tps/${it._id}/${profesorId}/${it.materia.nombre}`}
+                  variant="contained"
+                  key={it._id}
+                >
+                  {` ${it.materia.nombre}`} | {` ${it.comision}`}
+                </Button>
                 ))}
               </Container>
             </Container>
